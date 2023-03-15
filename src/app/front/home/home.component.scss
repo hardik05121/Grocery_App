@@ -1,0 +1,38 @@
+// btn brow all category
+.call{
+    display: flex;
+    justify-content: space-between; }
+
+ .call1{
+    display: flex;
+    float: left;
+    column-gap: 20px;
+      
+    }
+    
+    .btn{
+        margin-right: 20px;
+    }
+    
+    .btn-lg{
+        color: white;
+        border: none;
+        background-color: rgb(117, 217, 162);
+    }
+
+    
+// explore category
+
+.feature-category{
+    display: flex;
+    justify-content: space-between;
+   
+}
+.margin{
+    padding: 10px;
+    margin: 10px;
+}
+.btn{
+    margin: 5px;
+}
+

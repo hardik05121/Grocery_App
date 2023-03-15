@@ -3,20 +3,22 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from "@angular/common/http";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { CoreModule } from './core/core.module';
+import { FrontModule } from './front/front.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    HeaderComponent,
-    FooterComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CoreModule,
+    FrontModule
   ],
   providers: [],
   bootstrap: [AppComponent]

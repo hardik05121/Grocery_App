@@ -1,1 +1,36 @@
-<p>category works!</p>
+
+  <!-- for filter button -->
+
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle filterButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-filter-right"></i>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#" (click)="handleFilterClick('Fruit')">Fruits</a></li>
+      <li><a class="dropdown-item" href="#" (click)="handleFilterClick('vegetable')">Vegetable</a></li>
+    </ul>
+  </div>
+
+  <!-- for this poage category -->
+<div class="main-cointainer d-flex " style="margin: 10px; padding: 10px;">
+    <div class="card" style="width:18rem" *ngFor="let data of category_ary">
+        <img src="/assets/cat_img/{{data.img}}" alt="**" class="card-img-top">
+        <div class="card-body">
+            <p class="card-text">{{data.category}}</p>
+            <h5 class="card-title">{{ data.name}} {{data.quality}}g</h5>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <div class="d-flex justify-content-between">
+                <h5>{{data.price}}</h5>
+                <span class="text-decoration-line-through">{{data.gprice}}</span>
+                <a href="#" class="btn btn-primary">add</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngFor="let item of filteredData">
+    {{ item.property }}
+  </div>

@@ -6,12 +6,9 @@ import { RegistrationComponent } from './registration/registration.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
+ 
   {
-    path:'',
-    component:LoginComponent
-  },
-  {
-    path:'login',
+    path:"login",
     component:LoginComponent
   },
   {
