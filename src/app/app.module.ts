@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CoreModule } from './core/core.module';
-import { FrontModule } from './front/front.module';
+import { FrontModule} from './front/front.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { FrontModule } from './front/front.module';
     AppRoutingModule,
     HttpClientModule,
     CoreModule,
-    FrontModule
+    FrontModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

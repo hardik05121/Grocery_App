@@ -1,1 +1,59 @@
-<p>registration works!</p>
+<div class="main-container">
+
+<form  [formGroup]="RegistrationForm" (ngSubmit)="submit()">
+<div class="container-fluid">
+  
+  <div>
+    <h1>{{Rtitle}}</h1>
+  </div>
+  <div class="text">
+    <label for="fname">First Name</label>
+    <input type="text"  id="fname" placeholder="First Name" formControlName="fname" ><br>
+    <span style="color:red;" *ngIf="fname && fname.invalid && fname.touched">Please Enter Valid First Name</span>
+  </div>
+  <div class="text">
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" placeholder="Last Name" formControlName="lname" ><br>
+    <span style="color:red;" *ngIf="lname && lname.invalid && lname.touched">Please Enter Valid Last Name</span>
+  </div>
+  <div class="text">
+    <label for="email">Email:-</label>
+    <input type="email" id="email" placeholder="email" formControlName="email" ><br>
+    <span style="color:red;" *ngIf="email && email.invalid && email.touched">Please Enter Valid email</span>
+  </div>
+  <div class="text">
+    <label for="phone">Contact No:-</label>
+    <input type="number" id="phone" placeholder="Contact No" formControlName="phone" ><br>
+    <span style="color:red;" *ngIf="phone && phone.invalid && phone.touched">Please Enter Valid Contact No</span>
+  </div>
+  <div class="text">
+    <label for="pass">Password</label>
+    <input type="" id="pass" placeholder="Password" formControlName="pass" ><br>
+    <span style="color:red;" *ngIf=" pass &&  pass.invalid && pass.touched">Please Enter Valid Password</span>
+  </div>
+  <div class="text">
+    <a routerLink="/front/user/login"><button [disabled]="RegistrationForm.invalid">Submit</button></a>
+    
+  </div>
+  <div class="text">
+   <p>All Ready Have Account?<a routerLink="/front/user/login">LogIn</a></p> 
+    
+  </div>
+
+</div>
+<hr>
+<div class="container-fluid">
+  <h5>OR</h5>
+  <h6>other Sign-in option.</h6>
+  <div class="text">
+    <button>Sign Up With Google</button>
+  </div>
+  <div class="text">
+    <button>Sign Up With Facebook</button>
+  </div>
+</div>
+
+
+
+</form>
+</div>

@@ -1,0 +1,35 @@
+.main-container{
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 600px ;
+    height: auto;
+    padding: 50px;
+    text-align: center;
+   
+    background-color:rgb(246, 250, 238);
+    box-shadow: 10px  10px 50px rgb(77, 60, 60);
+    align-items: center;
+    margin-top: 25%;
+    margin-left: 50%;
+    transform: translate(-50%,-50%);
+}
+    
+
+.contaioner-fluid{
+    padding: 15px;
+    margin: 15px;
+}
+
+label{
+    display: inline-block;
+    width: 100px;
+}
+
+.text{
+    padding: 10px;
+}
+
+button{
+    margin-left: 10px;
+    
+}

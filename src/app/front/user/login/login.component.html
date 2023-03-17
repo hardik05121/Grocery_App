@@ -1,1 +1,33 @@
-<p>login works!</p>
+<div class="main-container">
+
+    <form  [formGroup]="LoginForm" (ngSubmit)="LogIn()">
+    <div class="container-fluid">
+      
+      <div>
+        <h1>{{Ltitle}}</h1>
+      </div>
+      <div class="text">
+        <label for="email">Email:-</label>
+        <input type="email" id="email" placeholder="email" formControlName="email" ><br>
+        <span style="color:red;" *ngIf="email && email.invalid && email.touched">Please Enter Valid email</span>
+      </div>
+      <div class="text">
+        <label for="pass">Password</label>
+        <input type="" id="pass" placeholder="Password" formControlName="pass" ><br>
+        <span style="color:red;" *ngIf=" pass &&  pass.invalid && pass.touched">Please Enter Valid Password</span>
+      </div>
+      <div class="text">
+        <a routerLink="/"> <button [disabled]="LoginForm.invalid">Submit</button></a>
+       
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid">
+      <p>New User <a routerLink="/front/user/registration">Register Now</a></p>
+    </div>
+    
+    
+    
+    </form>
+    </div>
+    

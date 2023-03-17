@@ -16,13 +16,21 @@ export class CategoryComponent {
 
 
 
+  filteredPeople = this.category_ary;
 
-  filteredData: any[] | undefined;
+  filterPeopleByAge(category: string) {
+    this.filteredPeople = this.category_ary.filter((category_ary: { category: string; }) => category_ary.category == category);
+  }
+}
+
+
+
+  // filteredData: any[] | undefined;
   // item :string | undefined;
 
-  handleFilterClick(filterCriteria: string) {
-    this.filteredData = this.category_ary.filter((item: { property: string; }) => item.property === filterCriteria);
-  }
+  // handleFilterClick(filterCriteria: string) {
+  //   this.filteredData = this.category_ary.filter((item: { category.value: string; }) => item.category.value === filterCriteria);
+  // }
 
-}
+
 

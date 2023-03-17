@@ -5,6 +5,8 @@ import { CatlogRoutingModule } from './catlog-routing.module';
 import { CategoryComponent } from './category/category.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { core } from '@angular/compiler';
+import { CoreModule } from 'src/app/core/core.module';
 
 
 @NgModule({
@@ -15,7 +17,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
   ],
   imports: [
     CommonModule,
-    CatlogRoutingModule
+    CatlogRoutingModule,
+    CoreModule
   ]
 })
 export class CatlogModule { }

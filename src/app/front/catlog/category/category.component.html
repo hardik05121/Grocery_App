@@ -1,18 +1,20 @@
 
+<app-header></app-header>
   <!-- for filter button -->
-
   <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle filterButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">Filter <i class="bi bi-filter-right"></i>
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#" (click)="handleFilterClick('Fruit')">Fruits</a></li>
-      <li><a class="dropdown-item" href="#" (click)="handleFilterClick('vegetable')">Vegetable</a></li>
+      <li><a class="dropdown-item"  (click)="filterPeopleByAge('Fruits')"
+        >Fruits</a></li>
+      <li><a class="dropdown-item"  (click)="filterPeopleByAge('vagetables')"
+        >Vegetable</a></li>
     </ul>
   </div>
 
   <!-- for this poage category -->
 <div class="main-cointainer d-flex " style="margin: 10px; padding: 10px;">
-    <div class="card" style="width:18rem" *ngFor="let data of category_ary">
+    <div class="card" style="width:18rem" *ngFor="let data of filteredPeople">
         <img src="/assets/cat_img/{{data.img}}" alt="**" class="card-img-top">
         <div class="card-body">
             <p class="card-text">{{data.category}}</p>
@@ -31,6 +33,9 @@
     </div>
 </div>
 
-<div *ngFor="let item of filteredData">
-    {{ item.property }}
-  </div>
+<!-- <div *ngFor="let item of filteredData">
+    {{ item.category }}
+  </div> -->  
+<ul>
+  <li *ngFor="let cat of filteredPeople">{{ cat.name }}</li>
+</ul>
